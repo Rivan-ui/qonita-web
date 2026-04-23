@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Qonita ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: url('your-background.jpg') no-repeat center center/cover;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  color: rgba(243, 14, 14, 0.466);
+}
+
+/* OVERLAY PINK + BLUR */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 20, 147, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  background:rgba(255,255,255,0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 40px rgba(107, 107, 107, 0.4);
+  z-index: 1;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 0 0 10px #ffffff, 0 0 25px #ff0000;
+}
+
+#typing {
+  font-size: 1.3em;
+  margin-top: 20px;
+  min-height: 60px;
+  background: rgba(255,255,255,0.2);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 15px rgba(107, 104, 104, 0.4);
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: white;
+  color: #7008e7b7;
+  cursor: pointer;
+}
+
+/* PARALLAX EFFECT */
+body {
+  background-attachment: fixed;
+}
+
+/* LOVE FLOAT */
+.heart {
+  position: absolute;
+  animation: floatUp linear infinite;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(0.5); opacity:0; }
+  50% { opacity:1; }
+  100% { transform: translateY(-10vh) scale(1.5); opacity:0; }
+}
+
+/* STARS */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgb(255, 0, 0);
+  animation: twinkle 2s infinite alternate;
+  z-index: 1;
+}
+
+@keyframes twinkle { from {opacity:0.2;} to {opacity:1;} }
+
+/* GIFT */
+.gift {
+  font-size: 60px;
+  cursor: pointer;
+  margin-top: 20px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,100%{transform: translateY(0);} 
+  50%{transform: translateY(-10px);} 
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgb(228, 77, 228);
+  color: #1d0c18;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.popup.active { transform: translate(-50%, -50%) scale(1); }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 2;
+}
+
+.overlay.active { display: block; }
+
+/* CUTE STICKERS (NAILONG STYLE) */
+.sticker {
+  position: absolute;
+  width: 80px;
+  pointer-events: none;
+  animation: floatSticker 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes floatSticker {
+  0%,100%{ transform: translateY(0) rotate(0deg);} 
+  50%{ transform: translateY(-20px) rotate(5deg);} 
+}
+
+.bubble {
+  position: absolute;
+  font-size: 20px;
+  animation: bubbleUp 5s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes bubbleUp {
+  0%{ transform: translateY(100vh) scale(0.5); opacity:0; }
+  50%{ opacity:1; }
+  100%{ transform: translateY(-10vh) scale(1.2); opacity:0; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- CUTE STICKERS -->
+<img src="sticker_5.avif" class="sticker" style="top:10%; left:5%;">
+<img src="sticker_6.avif" class="sticker" style="bottom:10%; right:5%;">
+<img src="sticker_21.avif" class="sticker" style="top:20%; right:15%;">
+
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3">
+</audio>
+
+<div class="container">
+  <h1>Happy Birthday Qonita ❤️</h1>
+
+  <!-- FOTO KENANGAN SLIDESHOW -->
+  <div id="slideshow" style="position:relative; width:200px; height:120px; margin:15px auto; display:flex; justify-content:center; align-items:center;">
+    <img class="slide" src="IMG-20260423-WA0014.jpg" style="position:absolute;width:100%;height:100%;object-fit:cover;border-radius:15px;border:3px solid white;opacity:1;transition:1s;box-shadow:0 0 15px #fff,0 0 25px #ff69b4;">
+    <img class="slide" src="IMG-20260423-WA0015.jpg" style="position:absolute;width:100%;height:100%;object-fit:cover;border-radius:15px;border:3px solid white;opacity:0;transition:1s;box-shadow:0 0 15px #fff,0 0 25px #ff69b4;">
+    <img class="slide" src="IMG-20260423-WA0016.jpg" style="position:absolute;width:100%;height:100%;object-fit:cover;border-radius:15px;border:3px solid white;opacity:0;transition:1s;box-shadow:0 0 15px #fff,0 0 25px #ff69b4;">
+    <img class="slide" src="IMG-20260423-WA0017.jpg" style="position:absolute;width:100%;height:100%;object-fit:cover;border-radius:15px;border:3px solid white;opacity:0;transition:1s;box-shadow:0 0 15px #fff,0 0 25px #ff69b4;">
+  </div>
+
+  <div id="typing"></div>
+  <div class="gift" onclick="openGift(event)">🎁</div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="popup" id="popup">
+  <h2>Untuk Qonita 💖</h2>
+  <p id="surpriseText"></p>
+  <h3 id="fromName"></h3>
+  <button onclick="closePopup()">Tutup</button>
+</div>
+
+<script>
+// SLIDESHOW
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+function showSlides(){
+  slides.forEach((s,i)=> s.style.opacity = i===slideIndex ? '1':'0');
+  slideIndex = (slideIndex + 1) % slides.length;
+}
+setInterval(showSlides,2000);
+
+// PARALLAX MOVE
+window.addEventListener("mousemove", (e) => {
+  document.body.style.backgroundPosition = `${50 + e.clientX/50}% ${50 + e.clientY/50}%`;
+});
+
+// TYPING
+const text = "Di hari spesialmu ini, aku bersyukur karena Tuhan menghadirkanmu dalam hidupku. 💕";
+let i = 0;
+function typing(){ if(i<text.length){ document.getElementById("typing").innerHTML += text.charAt(i); i++; setTimeout(typing,40);} }
+window.onload = typing;
+
+// HEART
+function createHeart(){
+  const h=document.createElement('div');
+  h.classList.add('heart');
+  h.innerHTML='💖';
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=Math.random()*20+10+'px';
+  h.style.animationDuration=Math.random()*3+3+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+}
+setInterval(createHeart,150);
+
+// STARS
+
+// BUBBLE LOVE
+function createBubble(){
+  const b=document.createElement('div');
+  b.classList.add('bubble');
+  b.innerHTML='💗';
+  b.style.left=Math.random()*100+'vw';
+  b.style.fontSize=Math.random()*15+10+'px';
+  b.style.animationDuration=Math.random()*3+3+'s';
+  document.body.appendChild(b);
+  setTimeout(()=>b.remove(),5000);
+}
+setInterval(createBubble,400);
+
+// STARS
+for(let i=0;i<100;i++){
+  const s=document.createElement('div');
+  s.classList.add('star');
+  s.style.left=Math.random()*100+'vw';
+  s.style.top=Math.random()*100+'vh';
+  document.body.appendChild(s);
+}
+
+// CONFETTI
+function createConfetti(x,y){
+  for(let i=0;i<40;i++){
+    const c=document.createElement('div');
+    c.style.position='absolute';
+    c.style.left=x+'px';
+    c.style.top=y+'px';
+    c.style.width='6px';
+    c.style.height='6px';
+    c.style.background=`hsl(${Math.random()*360},100%,50%)`;
+    c.style.animation=`fall ${Math.random()*2+2}s linear forwards`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),3000);
+  }
+}
+
+// FIREWORK
+function createFirework(x,y){
+  for(let i=0;i<25;i++){
+    const f=document.createElement('div');
+    f.style.position='absolute';
+    f.style.left=x+'px';
+    f.style.top=y+'px';
+    f.style.width='5px';
+    f.style.height='5px';
+    f.style.background=`hsl(${Math.random()*360},100%,50%)`;
+    const dx=(Math.random()-0.5)*200;
+    const dy=(Math.random()-0.5)*200;
+    f.animate([
+      {transform:'translate(0,0)', opacity:1},
+      {transform:`translate(${dx}px,${dy}px)`, opacity:0}
+    ],{duration:1000});
+    document.body.appendChild(f);
+    setTimeout(()=>f.remove(),1000);
+  }
+}
+
+// GIFT
+function openGift(e){
+  document.getElementById('popup').classList.add('active');
+  document.getElementById('overlay').classList.add('active');
+  typeSurprise();
+  createConfetti(e.clientX,e.clientY);
+  createFirework(e.clientX,e.clientY);
+}
+
+function closePopup(){
+  document.getElementById('popup').classList.remove('active');
+  document.getElementById('overlay').classList.remove('active');
+}
+
+// SURPRISE
+const surprise = "Aku mungkin bukan yang sempurna... tapi aku selalu tulus sayang kamu 💕 Selamat ulang tahun ya Qonita ❤️";
+let j=0;
+function typeSurprise(){
+  const el=document.getElementById('surpriseText');
+  el.innerHTML=''; j=0;
+  function loop(){ if(j<surprise.length){ el.innerHTML+=surprise.charAt(j); j++; setTimeout(loop,40);} }
+  loop();
+  document.getElementById('fromName').innerHTML="Dari:Rivan❤️";
+}
+</script>
+
+</body>
+</html>
